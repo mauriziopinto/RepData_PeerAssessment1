@@ -97,7 +97,7 @@ intervalWithMaxSteps <- stepsInterval[which.max(stepsInterval$steps), ]$interval
 
 The interval with the maximum number of steps is the number **835**
 
-## Inputing missing values
+## Imputing missing values
 
 Note that there are a number of days/intervals where there are missing values (coded as NA). The presence of missing days may introduce bias into some calculations or summaries of the data.
 
@@ -143,7 +143,7 @@ head(activityWithoutNA)
 ## 6 2.0943396 2012-10-01       25
 ```
 
-- Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. What is the impact of inputing missing data on the estimates of the total daily number of steps? Do these values differ from the estimates from the first part of the assignment?
+- Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. What is the impact of imputing missing data on the estimates of the total daily number of steps? Do these values differ from the estimates from the first part of the assignment?
 
 
 ```r
@@ -160,7 +160,7 @@ medianWithoutNA <- median(activityAggregatedByDayWithoutNA$steps)
 
 The mean of total number of steps taken per day is **1.0766189 &times; 10<sup>4</sup>** and the median is **1.0766189 &times; 10<sup>4</sup>**
 
-The impact is that the total daily number of steps per day and the median are higher, because we added some values that were previously NA. The mean is exactly the same, because we replaced the NA values with the mean value for the corresponding interval and then divided by the full sample (not only by the sample with not NA values in the "step" variable)
+The impact is that the total daily number of steps per day and the median are higher, because we added some values that were previously NA. The median is equal to the mean, because we replaced the NAs with the mean and that value became the midpoint of our frequency distribution. The mean is exactly the same, because we replaced the NA values with the mean value for the corresponding interval and then divided by the full sample (not only by the sample with not NA values in the "step" variable)
 
 
 ## Are there differences in activity patterns between weekdays and weekends?
